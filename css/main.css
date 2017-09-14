@@ -40,6 +40,20 @@ input[type="checkbox"] + label::before {
   background-color: #52a866;
 }
 
+.text-light-green,
+.text-light-green-hov:hover,
+.text-light-green-hov:focus,
+.text-light-green-hov:active {
+  color: #a8d3b2;
+}
+
+.bg-light-green,
+.bg-light-green-hov:hover,
+.bg-light-green-hov:focus,
+.bg-light-green-hov:active {
+  background-color: #a8d3b2;
+}
+
 .text-fff,
 .text-fff-hov:hover,
 .text-fff-hov:focus,
@@ -68,7 +82,7 @@ input[type="checkbox"] + label::before {
   background-color: #333;
 }
 
-/* ----- =XS ----- */
+/* ---------- =XS ---------- */
 
 /* ----- =Menu ----- */
 
@@ -86,12 +100,30 @@ header {
 
 nav {
   position: fixed;
-  left: -15rem;
   top: 3.36125rem;
-  width: 50vw;
+  left: -100rem;
+  width: 100vw;
   height: calc(100vh - 3.36125rem);
-  background-color: #a8d3b2;
+  background-color: #52a866;
   transition: left .5s;
+
+}
+
+nav li {
+  font-size: 1.5745rem;
+  padding: .65rem 0;
+}
+
+.nav-divide {
+  border-bottom: 1px solid #a8d3b2;
+  content: '';
+  padding: 0;
+}
+
+.i-nav {
+  width: 48px;
+  height: 48px;
+  margin-right: 1.3rem;
 }
 
 .grey-out {
