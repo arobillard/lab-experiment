@@ -1,0 +1,146 @@
+html {
+  font-family: "Museo Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus,
+[tabindex="0"]:focus,
+details:focus,
+summary:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: 0 0 10px #52a866;
+}
+
+input[type="checkbox"] + label::before {
+  position: absolute;
+  left: -1000px;
+}
+
+/* ----- =Colors ----- */
+
+.text-green,
+.text-green-hov:hover,
+.text-green-hov:focus,
+.text-green-hov:active {
+  color: #52a866;
+}
+
+.bg-green,
+.bg-green-hov:hover,
+.bg-green-hov:focus,
+.bg-green-hov:active {
+  background-color: #52a866;
+}
+
+.text-fff,
+.text-fff-hov:hover,
+.text-fff-hov:focus,
+.text-fff-hov:active {
+  color: #fff;
+}
+
+.bg-fff,
+.bg-fff-hov:hover,
+.bg-fff-hov:focus,
+.bg-fff-hov:active {
+  background-color: #fff;
+}
+
+.text-333,
+.text-333-hov:hover,
+.text-333-hov:focus,
+.text-333-hov:active {
+  color: #333;
+}
+
+.bg-333,
+.bg-333-hov:hover,
+.bg-333-hov:focus,
+.bg-333-hov:active {
+  background-color: #333;
+}
+
+/* ----- =XS ----- */
+
+/* ----- =Menu ----- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-label {
+  float: right;
+}
+
+nav {
+  position: fixed;
+  left: -15rem;
+  top: 3.36125rem;
+  width: 50vw;
+  height: calc(100vh - 3.36125rem);
+  background-color: #a8d3b2;
+  transition: left .5s;
+}
+
+.grey-out {
+  position: fixed;
+  left: -150rem;
+  top: 3.36125rem;
+  width: 100vw;
+  height: calc(100vh - 3.36125rem);
+  background-color: #000;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.nav-check:checked ~ nav {
+  left: 0;
+}
+
+.nav-check:checked ~ .grey-out {
+  left: 0;
+  opacity: .5;
+}
+
+.nav-label i img {
+  -webkit-transition: transform 1s, opacity 1s;
+  -moz-transition: transform 1s, opacity 1s;
+  -ms-transition: transform 1s, opacity 1s;
+  -o-transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity, 1s;
+}
+
+.nav-label i img:nth-child(2) {
+  opacity: 0
+}
+
+.nav-check:checked ~ .nav-label i img:first-child {
+  opacity: 0;
+  transform: rotate(360deg);
+}
+
+.nav-check:checked ~ .nav-label i img:nth-child(2) {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+/* ----- =Main ----- */
+
+main {
+  margin-top: 3.36125rem;
+  min-height: calc(100vh - 3.36125rem - 2.54875rem);
+}
+
+/* ----- =Footer ----- */
